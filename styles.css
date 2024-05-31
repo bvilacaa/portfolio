@@ -1,0 +1,221 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Avenir Light', sans-serif;
+    background-color: #eee7df;
+}
+
+body {
+    max-width: 1200px; /* Define a largura máxima para o corpo da página */
+    margin: 0 auto; /* Centraliza o conteúdo na página */
+    display: flex;
+    flex-direction: column;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Header e Navegação */
+header {
+    background-color: #eee7df;
+    color: black;
+    padding: 1rem 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-family: 'Avenir', sans-serif;
+    font-weight: bold;
+    padding: 0.5rem;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+nav ul li a:hover {
+    color: white;
+    background-color: #3e6091;
+    border-radius: 5px;
+}
+
+/* Conteúdo Principal */
+main {
+    flex: 1;
+    padding: 6rem 2rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 6rem; /* Ajusta a margem superior para cobrir a barra de navegação */
+}
+
+/* Footer */
+footer {
+    background-color: #eee7df;
+    color: black;
+    text-align: center;
+    padding: 1rem 0;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    z-index: 999;
+}
+
+/* Títulos */
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #3e6091;
+}
+
+h2 {
+    margin-top: 2rem;
+}
+
+/* Texto Geral */
+p, label, textarea, input, button {
+    font-family: 'Avenir Light', sans-serif;
+    color: #000;
+}
+
+/* Estilo de Botões */
+button {
+    font-family: 'Avenir Light', sans-serif;
+    background-color: #3e6091;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2c476f;
+}
+
+/* Cursor personalizado */
+.cursor {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #a7d8f0d1; /* Azul pastel */
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 10000;
+    transition: transform 0.1s ease-out, left 0.1s ease-out, top 0.1s ease-out;
+}
+
+/* Estilos para animações */
+.animated-element {
+    transition: all 0.3s ease; /* Adiciona uma transição suave */
+}
+
+/* Exemplo de animação de carregamento */
+@keyframes loading {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loading-spinner {
+    animation: loading 1s infinite linear; /* Adiciona a animação de rotação infinita */
+}
+
+/* Estilos para o menu suspenso */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    z-index: 1;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Estilos para a barra de pesquisa */
+.search {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    margin-right: 1rem; /* Adiciona uma pequena margem à direita para a barra de pesquisa */
+}
+
+.search input[type="text"] {
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+}
+
+.search button {
+    padding: 8px 12px;
+    background-color: #3e6091;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 8px;
+    transition: background-color 0.3s;
+}
+
+.search button:hover {
+    background-color: #588bd2;
+}
+
+/* Estilos para o botão de ver mais */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3e6091;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #588bd2;
+}
+

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento 1 - Beatriz Vilaça</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Adicione o link para o Slick Carousel CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"/>
+    <style>
+        /* Estilos básicos */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            padding: 20px 0;
+            background-color: #eee7df;
+            text-align: center;
+        }
+
+        footer {
+            padding: 20px 0;
+            background-color: #eee7df;
+            text-align: center;
+        }
+
+        main {
+            flex-grow: 1; /* Ocupa todo o espaço restante */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px; /* Adiciona espaçamento superior */
+        }
+
+        .image-container {
+            position: relative;
+            cursor: pointer;
+            text-align: center; /* Centraliza a imagem horizontalmente */
+            max-width: 80%; /* Define uma largura máxima para o contêiner */
+            margin-bottom: 20px; /* Adiciona espaçamento inferior */
+        }
+
+        .overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border-radius: 50%;
+            padding: 20px;
+            transition: opacity 0.3s;
+            opacity: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            font-weight: bold;
+            pointer-events: none; /* Impede que o círculo seja clicável */
+        }
+
+        .image-container:hover .overlay {
+            opacity: 0; /* Oculta o círculo ao passar o mouse */
+        }
+
+        .image-container img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin-top: -20px; /* Afasta a imagem do título */
+        }
+
+        .title {
+            font-family: 'Montserrat', sans-serif;
+            color: #3e6091;
+            position: relative;
+            top: -70px;
+            text-align: center;
+            font-size: 32px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="galeria.html">GALERIA</a></li>
+                <li><a href="sobre.html">SOBRE MIM</a></li>
+                <li><a href="orcamento.html">ORÇAMENTO</a></li>
+                <li class="dropdown">
+                    <a href="#">PORTFÓLIO</a>
+                    <div class="dropdown-content">
+                        <a href="#">Fotografia</a>
+                        <a href="#">Vídeos</a>
+                        <a href="#">Ilustrações</a>
+                    </div>
+                </li>
+                <li class="search">
+                    <input type="text" placeholder="Pesquisar...">
+                    <button type="submit">Buscar</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="title">Orçamento</div>
+        <div class="image-container" onclick="changeImage()">
+            <div class="overlay">Toque aqui</div>
+            <img id="mainImage" src="imagens/evento3/antes.jpg" alt="Antes">
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Beatriz Vilaça</p>
+    </footer>
+    
+    <script>
+        function changeImage() {
+            var mainImage = document.getElementById('mainImage');
+            if (mainImage.src.endsWith('antes.jpg')) {
+                mainImage.src = 'imagens/evento3/depois.jpg';
+            } else {
+                mainImage.src = 'imagens/evento3/antes.jpg';
+            }
+        }
+    </script>
+</body>
+</html>

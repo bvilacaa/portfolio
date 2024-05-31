@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XVIII Cidade Berço - Beatriz Vilaça</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="galeria.css">
+    <!-- Link para o Slick Carousel CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"/>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="galeria.html">GALERIA</a></li>
+                <li><a href="sobre.html">SOBRE MIM</a></li>
+                <li><a href="orcamento.html">ORÇAMENTO</a></li>
+                <li class="dropdown">
+                    <a href="#">PORTFÓLIO</a>
+                    <div class="dropdown-content">
+                        <a href="#">Fotografia</a>
+                        <a href="#">Vídeos</a>
+                        <a href="#">Ilustrações</a>
+                    </div>
+                </li>
+                <li class="search">
+                    <input type="text" placeholder="Pesquisar...">
+                    <button type="submit">Buscar</button>
+                </li>
+            </ul>
+        </nav>
+        <h2>XVIII Cidade Berço</h2>
+    </header>
+    <main>
+        <section id="carrossel">
+            <div class="carousel">
+                <div><img src="imagens/cb/1.jpg" alt="Imagem do Evento 1"></div>
+                <div><img src="imagens/cb/2.jpg" alt="Imagem do Evento 2"></div>
+                <div><img src="imagens/cb/3.jpg" alt="Imagem do Evento 3"></div>
+                <!-- Adicione mais imagens conforme necessário -->
+            </div>
+        </section>
+
+        <!-- Nova seção de informações do evento -->
+        <section id="informacoes-evento">
+            <h2>Informações do Evento</h2>
+            <p><strong>Organização:</strong> Afonsina - Tuna de Engenharia da Universidade do Minho</p>
+            <p><strong>Data:</strong> 1 de Março de 2024</p>
+            <p>Este evento foi o primeiro que fotografei profissionalmente, tendo sido convidada pela organização.</p>
+        </section>
+
+        <section id="grelha">
+            <div class="grid-container">
+                <div class="grid-item"><img src="imagens/cb/1.jpg" alt="Imagem do Evento 1"></div>
+                <div class="grid-item"><img src="imagens/cb/2.jpg" alt="Imagem do Evento 2"></div>
+                <div class="grid-item"><img src="imagens/cb/3.jpg" alt="Imagem do Evento 3"></div>
+                <!-- Adicione mais imagens conforme necessário -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Beatriz Vilaça</p>
+    </footer>
+    <div id="modal" class="modal">
+        <span class="fechar">&times;</span>
+        <img src="" id="imagem-modal" alt="Imagem do Evento">
+        <a class="anterior">&#10094;</a>
+        <a class="proximo">&#10095;</a>
+    </div>
+    <!-- Link para o Slick Carousel JS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.carousel').slick({
+                autoplay: true,
+                dots: true,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 1,
+                slidesToScroll: 1
+            });
+        });
+    </script>
+     <script src="custom-cursor.js"></script> <!-- JavaScript do cursor personalizado -->
+     <script src="slick-carousel-setup.js"></script> <!-- Configuração do Slick Carousel -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+    <script src="script.js"></script>
+    <script src="slick-carousel-setup.js"></script>
+</body>
+</html>

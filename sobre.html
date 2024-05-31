@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Mim - Beatriz Vilaça</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="sobre.css"> 
+    <!-- Slick Carousel CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"/>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="galeria.html">GALERIA</a></li>
+                <li><a href="sobre.html">SOBRE MIM</a></li>
+                <li><a href="orcamento.html">ORÇAMENTO</a></li>
+                <li class="dropdown">
+                    <a href="#">PORTFÓLIO</a>
+                    <div class="dropdown-content">
+                        <a href="#">Fotografia</a>
+                        <a href="#">Vídeos</a>
+                        <a href="#">Ilustrações</a>
+                    </div>
+                </li>
+                <li class="search">
+                    <input type="text" placeholder="Pesquisar...">
+                    <button type="submit">Buscar</button>
+                </li>
+            </ul>
+        </nav>
+        <h2>Sobre Mim</h2>
+    </header>
+    <main>
+        <section id="sobre">
+            <div class="foto-container">
+                <img src="sua-foto.jpg" alt="Foto de Beatriz Vilaça" class="foto-perfil">
+            </div>
+            <p>Olá, sou Beatriz Vilaça, fotógrafa e videógrafa. Tenho uma paixão por capturar momentos especiais e transformar histórias em imagens e vídeos inesquecíveis...</p>
+            <!-- Mais conteúdo sobre você -->
+            <div class="interests">
+                <h2>Meus Interesses</h2>
+                <ul>
+                    <li>Fotografia de paisagens</li>
+                    <li>Fotografia de retratos</li>
+                    <li>Videografia</li>
+                    <li>Design gráfico</li>
+                </ul>
+            </div>
+            <div class="skills">
+                <h2>Minhas Habilidades</h2>
+                <ul>
+                    <li><img src="imagens/icones/photoshop.png" alt="Ícone 1"> Adobe Photoshop</li>
+                    <li><img src="imagens/icones/lightroom.png" alt="Ícone 2"> Adobe Lightroom</li>
+                    <li><img src="imagens/icones/premiere.png" alt="Ícone 3"> Adobe Premiere Pro</li>
+                    <li><img src="imagens/icones/after.png" alt="Ícone 4"> After Effects</li>
+                    <li><img src="imagens/icones/illustrator.png" alt="Ícone 5"> Adobe Illustrator</li>
+                </ul>
+            </div>
+            <div class="carousel-container">
+                <h2>Galeria de Trabalhos</h2>
+                <div class="carousel">
+                    <div><img src="imagens/trabalho1.jpg" alt="Trabalho 1"></div>
+                    <div><img src="imagens/trabalho2.jpg" alt="Trabalho 2"></div>
+                    <div><img src="imagens/trabalho3.jpg" alt="Trabalho 3"></div>
+                </div>
+            </div>
+            <div class="testimonials">
+                <h2>Depoimentos</h2>
+                <div class="testimonial">
+                    <p>"Beatriz é uma fotógrafa incrível! Capturou os momentos mais especiais do nosso casamento."</p>
+                    <cite>- Cliente Satisfeito</cite>
+                </div>
+                <div class="testimonial">
+                    <p>"Seus vídeos são emocionantes e profissionais. Recomendo a todos."</p>
+                    <cite>- Outro Cliente Satisfeito</cite>
+                </div>
+            </div>
+            <div class="download-cv">
+                <a href="curriculo.pdf" download>Aceda aqui ao meu currículo (PDF)</a>
+            </div>
+            <div class="redes-sociais">
+                <!-- Links para redes sociais -->
+                <a href="https://www.facebook.com"><img src="imagens/icones/facebook.png" alt="Facebook"></a>
+                <a href="https://www.instagram.com"><img src="imagens/icones/instagram.png" alt="Instagram"></a>
+                <a href="https://www.linkedin.com"><img src="imagens/icones/linkedin.png" alt="LinkedIn"></a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Beatriz Vilaça</p>
+    </footer>
+    <!-- Slick Carousel JS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+    <script src="custom-cursor.js"></script> <!-- Incluindo o JavaScript do cursor personalizado -->
+    <script>
+        $(document).ready(function(){
+            $('.carousel').slick({
+                autoplay: true,
+                dots: true,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: true
+            });
+        });
+    </script>
+</body>
+</html>

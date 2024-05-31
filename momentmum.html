@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IX MOMENTMUM - Beatriz Vilaça</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="galeria.css"> 
+    <!-- Adicione o link para o Slick Carousel CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"/>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="galeria.html">GALERIA</a></li>
+                <li><a href="sobre.html">SOBRE MIM</a></li>
+                <li><a href="orcamento.html">ORÇAMENTO</a></li>
+                <li class="dropdown">
+                    <a href="#">PORTFÓLIO</a>
+                    <div class="dropdown-content">
+                        <a href="#">Fotografia</a>
+                        <a href="#">Vídeos</a>
+                        <a href="#">Ilustrações</a>
+                    </div>
+                </li>
+                <li class="search">
+                    <input type="text" placeholder="Pesquisar...">
+                    <button type="submit">Buscar</button>
+                </li>
+            </ul>
+        </nav>
+        <h2>IX MOMENTMUM</h2>
+    </header>
+    <main>
+        <section id="carrossel">
+            <div class="carousel">
+                <div><img src="imagens/evento2/1.jpg" alt="Imagem 1"></div>
+                <div><img src="imagens/evento2/2.jpg" alt="Imagem 2"></div>
+                <div><img src="imagens/evento2/3.jpg" alt="Imagem 3"></div>
+                <!-- Adicione mais imagens conforme necessário -->
+            </div>
+        </section>
+        <section id="grelha">
+            <div class="grid-container">
+                <div class="grid-item"><img src="imagens/evento2/1.jpg" alt="Imagem 1"></div>
+                <div class="grid-item"><img src="imagens/evento2/2.jpg" alt="Imagem 2"></div>
+                <div class="grid-item"><img src="imagens/evento2/3.jpg" alt="Imagem 3"></div>
+                <!-- Adicione mais imagens conforme necessário -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Beatriz Vilaça</p>
+    </footer>
+    <!-- Adicione o link para o Slick Carousel JS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.carousel').slick({
+                autoplay: true,
+                dots: true,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 1,
+                slidesToScroll: 1
+            });
+        });
+// Criar o elemento do cursor personalizado
+const cursor = document.createElement('div');
+        cursor.classList.add('cursor');
+        document.body.appendChild(cursor);
+
+        // Função para atualizar a posição do cursor
+        function moveCursor(e) {
+            cursor.style.left = `${e.clientX}px`;
+            cursor.style.top = `${e.clientY}px`;
+        }
+
+        // Adicionar evento de movimento do mouse
+        document.addEventListener('mousemove', moveCursor);
+    </script>
+    </script>
+    <script src="custom-cursor.js"></script> <!-- Incluindo o JavaScript do cursor personalizado -->
+    <script src="slick-carousel-setup.js"></script>
+</body>
+</html>

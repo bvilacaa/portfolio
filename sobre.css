@@ -1,0 +1,157 @@
+/* Estilos para a página Sobre Mim */
+
+section#sobre {
+    text-align: center;
+    padding: 2rem 1rem;
+    max-width: 800px; /* Define uma largura máxima para o conteúdo */
+    margin: 0 auto; /* Centraliza o conteúdo na página */
+}
+
+section#sobre h1 {
+    font-family: 'Montserrat', sans-serif;
+    color: #3e6091;
+    margin-bottom: 1rem;
+    margin-top: 2rem; /* Ajuste a margem superior para garantir que o título esteja visível */
+}
+
+section#sobre .foto-container {
+    margin: 1rem 0;
+}
+
+section#sobre .foto-perfil {
+    max-width: 20%; /* Ajusta a largura máxima para 100% do contêiner pai */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section#sobre p {
+    font-size: 1rem;
+    color: #333;
+    margin: 1rem 0;
+}
+
+section#sobre .skills ul li img {
+    width: 24px; /* Tamanho dos ícones */
+    height: auto;
+    margin-right: 10px; /* Espaçamento entre o ícone e o texto */
+}
+
+section#sobre .download-cv {
+    margin: 2rem 0;
+}
+
+section#sobre .download-cv a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #3e6091;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+section#sobre .download-cv a:hover {
+    background-color: #588bd2;
+}
+
+section#sobre .redes-sociais {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+section#sobre .redes-sociais a {
+    display: inline-block;
+    margin: 0 1rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+section#sobre .redes-sociais img {
+    width: 32px;  /* Tamanho ajustado dos ícones */
+    height: 32px; /* Tamanho ajustado dos ícones */
+    transition: transform 0.3s ease-in-out;
+}
+
+section#sobre .redes-sociais a:hover img {
+    transform: scale(1.2); /* Aumenta o ícone ao passar o mouse */
+}
+
+/* Estilos para a página Sobre Mim */
+section#sobre {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+section#sobre h1 {
+    font-family: 'Montserrat', sans-serif;
+    color: #3e6091;
+    margin-bottom: 1rem;
+    margin-top: 2rem; /* Ajuste a margem superior para garantir que o título esteja visível */
+}
+
+section#sobre .foto-container {
+    margin: 1rem 0;
+}
+
+section#sobre .foto-perfil {
+    max-width: 15%; /* Reduz o tamanho da foto de perfil */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section#sobre p {
+    font-size: 1rem;
+    color: #333;
+    margin: 1rem 0;
+}
+
+section#sobre .interests, 
+section#sobre .skills, 
+section#sobre .carousel-container,
+section#sobre .testimonials,
+section#sobre .download-cv,
+section#sobre .redes-sociais {
+    margin-top: 2rem;
+}
+
+section#sobre h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #3e6091;
+    margin-bottom: 1rem;
+}
+
+section#sobre ul {
+    list-style: none;
+    padding: 0;
+}
+
+section#sobre ul li {
+    margin-bottom: 0.5rem;
+}
+
+section#sobre .carousel {
+    margin: 0 auto;
+    max-width: 80%; /* Ajusta a largura máxima do carrossel */
+}
+
+section#sobre .testimonial {
+    margin-bottom: 2rem; /* Adiciona um espaço de 2rem abaixo de cada testemunho */
+    background-color: #fff; /* Fundo branco para os testemunhos */
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 70%; /* Reduz o tamanho do retângulo do depoimento */
+    margin: 0 auto 2rem; /* Centraliza o depoimento e adiciona uma margem inferior de 2rem */
+} 
+
+section#sobre .testimonial p {
+    color: #333;
+}
+
+section#sobre .testimonial cite {
+    color: #555;
+    font-style: italic;
+}
+

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orçamento - Beatriz Vilaça</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="orcamento.css"> 
+    <style>
+       
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="galeria.html">GALERIA</a></li>
+                <li><a href="sobre.html">SOBRE MIM</a></li>
+                <li><a href="orcamento.html">ORÇAMENTO</a></li>
+                <li class="dropdown">
+                    <a href="#">PORTFÓLIO</a>
+                    <div class="dropdown-content">
+                        <a href="#">Fotografia</a>
+                        <a href="#">Vídeos</a>
+                        <a href="#">Ilustrações</a>
+                    </div>
+                </li>
+                <li class="search">
+                    <input type="text" placeholder="Pesquisar...">
+                    <button type="submit">Buscar</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="orcamento">
+            <h2>Orçamento</h2>
+            <div class="pacotes">
+                <div class="pacote">
+                    <h2>Básico</h2>
+                    <p>Cerca de 50 a 200 fotos. Não inclui fotos individuais, apenas fotos de grupo. Apenas eventos com duração menor a 3 horas.</p>
+                    <p>Preço: 20€ - 50€</p>
+                    <button onclick="openForm('Básico')">Solicitar Orçamento</button>
+                </div>
+                <div class="pacote">
+                    <h2>Padrão</h2>
+                    <p>Cerca de 300 a 500 fotos. Inclui fotos individuais e de grupo. Apenas eventos com duração menor a 5 horas.</p>
+                    <p>Preço: 70€ - 100€</p>
+                    <button onclick="openForm('Padrão')">Solicitar Orçamento</button>
+                </div>
+                <div class="pacote">
+                    <h2>Premium</h2>
+                    <p>Cerca de 600 a 800 fotos. Inclui fotos individuais e de grupo. Apenas eventos com duração menor a 12 horas.</p>
+                    <p>Preço: 200€ - 300€</p>
+                    <button onclick="openForm('Premium')">Solicitar Orçamento</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="testemunhos">
+            <h2>Testemunhos</h2>
+            <div class="testemunhos-container">
+                <div class="testemunhos">
+                    <div class="testemunho">
+                        <p>"A Beatriz fez um trabalho incrível no nosso evento. As fotos ficaram maravilhosas!"</p>
+                        <p>- Cliente A</p>
+                    </div>
+                    <div class="testemunho">
+                        <p>"Estou muito satisfeito com o vídeo produzido pela Beatriz. Capturou perfeitamente a essência do nosso projeto."</p>
+                        <p>- Cliente B</p>
+                    </div>
+                    <div class="testemunho">
+                        <p>"As ilustrações ficaram lindas! Superou todas as expectativas."</p>
+                        <p>- Cliente C</p>
+                    </div>
+                </div>
+            </div>
+            <div class="controles">
+                <button onclick="anterior()">Anterior</button>
+                <button onclick="proximo()">Próximo</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Beatriz Vilaça</p>
+    </footer>
+<script>
+    function openForm(package) {
+        const url = `formulario.html?package=${encodeURIComponent(package)}`;
+        window.open(url, '_blank');
+    }
+
+    let index = 0;
+
+    function mostrarTestemunho(index) {
+        const testemunhos = document.querySelector('.testemunhos');
+        const testemunhoWidth = document.querySelector('.testemunho').clientWidth;
+        testemunhos.style.transform = `translateX(${-index * testemunhoWidth}px)`;
+    }
+
+    function anterior() {
+        const testemunhos = document.querySelectorAll('.testemunho').length;
+        index = (index > 0) ? index - 1 : testemunhos - 1;
+        mostrarTestemunho(index);
+    }
+
+    function proximo() {
+        const testemunhos = document.querySelectorAll('.testemunho').length;
+        index = (index < testemunhos - 1) ? index + 1 : 0;
+        mostrarTestemunho(index);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        mostrarTestemunho(index);
+    });
+</script>
+<script src="custom-cursor.js"></script> <!-- Incluindo o JavaScript do cursor personalizado -->
+</body>
+</html>

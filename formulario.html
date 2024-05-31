@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitar Orçamento - Beatriz Vilaça</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="formulario.css"> 
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="galeria.html">GALERIA</a></li>
+                <li><a href="sobre.html">SOBRE MIM</a></li>
+                <li><a href="orcamento.html">ORÇAMENTO</a></li>
+                <li class="dropdown">
+                    <a href="#">PORTFÓLIO</a>
+                    <div class="dropdown-content">
+                        <a href="#">Fotografia</a>
+                        <a href="#">Vídeos</a>
+                        <a href="#">Ilustrações</a>
+                    </div>
+                </li>
+                <li class="search">
+                    <input type="text" placeholder="Pesquisar...">
+                    <button type="submit">Buscar</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="formulario-orcamento">
+            <h1>Solicitar Orçamento</h1>
+            <form id="orcamento-form" action="https://formspree.io/f/mnqeynza" method="post">
+                <input type="hidden" id="package" name="package">
+                <input type="text" id="name" name="name" placeholder="Nome" required>
+                <input type="email" id="email" name="email" placeholder="E-mail" required>
+                <input type="tel" id="phone" name="phone" placeholder="Número de Telefone" required>
+                <textarea id="details" name="details" placeholder="Descrição do Evento" required></textarea>
+                <input type="text" id="location" name="location" placeholder="Local" required>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Beatriz Vilaça</p>
+    </footer>
+    <script>
+    // Obter o parâmetro da URL e preencher o campo do pacote
+    window.onload = function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const package = urlParams.get('package') || 'padrão'; // Valor padrão
+        document.getElementById('package').value = package;
+    }
+
+    // Adicionar validação do formulário
+    document.getElementById('orcamento-form').addEventListener('submit', function(event) {
+        // Verificar se todos os campos estão preenchidos
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+        const package = document.getElementById('package').value;
+        const details = document.getElementById('details').value;
+        const location = document.getElementById('location').value;
+
+        if (!name || !email || !phone || !package || !details || !location) {
+            alert('Por favor, preencha todos os campos.');
+            event.preventDefault();
+            return;
+        }
+
+        // Mostrar mensagem de sucesso
+        alert(`Obrigada, ${name}! O seu pedido de orçamento para o pacote ${package} foi enviado com sucesso. Nós entraremos em contato através do email: ${email} ou pelo telefone: ${phone}. Obrigada pela confiança!`);
+    });
+    </script>
+</body>
+</html>

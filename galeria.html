@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria - Beatriz Vilaça</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="galeria.css"> 
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="galeria.html">GALERIA</a></li>
+                <li><a href="sobre.html">SOBRE MIM</a></li>
+                <li><a href="orcamento.html">ORÇAMENTO</a></li>
+                <li class="dropdown">
+                    <a href="#">PORTFÓLIO</a>
+                    <div class="dropdown-content">
+                        <a href="#">Fotografia</a>
+                        <a href="#">Vídeos</a>
+                        <a href="#">Ilustrações</a>
+                    </div>
+                </li>
+                <li class="search">
+                    <input type="text" placeholder="Pesquisar...">
+                    <button type="submit">Buscar</button>
+                </li>
+            </ul>
+        </nav>
+        <h2>Galeria de Projetos</h2>
+    </header>
+    <main>
+        <section id="galeria">
+            <div class="filtros">
+                <button data-filter="todos">Todos</button>
+                <button data-filter="fotografia">Fotografia</button>
+                <button data-filter="video">Vídeo</button>
+                <button data-filter="ilustracao">Ilustração</button>
+            </div>
+            <div class="galeria-container">
+                <div class="evento" data-category="fotografia" data-date="2024-03-01">
+                    <a href="cidadeberco.html">
+                        <img src="imagens/cb/cover.jpg" alt="Evento 1">
+                        <h3>XVIII Cidade Berço</h3>
+                        <p>1 de Março de 2024</p>
+                    </a>
+                </div>
+                <div class="evento" data-category="fotografia" data-date="2024-04-20">
+                    <a href="momentmum.html">
+                        <img src="imagens/momentmum2/cover.jpg" alt="Evento 2">
+                        <h3>IX MOMENTMUM</h3>
+                        <p>20 de Abril de 2024</p>
+                    </a>
+                </div>
+                <div class="evento" data-category="video" data-date="2023-01-20">
+                    <a href="evento3.html">
+                        <img src="images/evento3/cover.jpg" alt="Evento 3">
+                        <h3>Projeto de Vídeo 1</h3>
+                        <p>20 de Janeiro de 2023</p>
+                    </a>
+                </div>
+                <div class="evento" data-category="ilustracao" data-date="2021-08-05">
+                    <a href="evento4.html">
+                        <img src="images/evento4/cover.jpg" alt="Evento 4">
+                        <h3>Projeto de Ilustração 1</h3>
+                        <p>5 de Agosto de 2021</p>
+                    </a>
+                </div>
+                <div class="evento" data-category="fotografia" data-date="2023-03-25">
+                    <a href="momentmum1.html">
+                        <img src="imagens/evento5/cover.jpg" alt="Evento 5">
+                        <h3>VIII MOMENTMUM</h3>
+                        <p>25 de Março de 2023</p>
+                    </a>
+                </div>
+                <div class="evento" data-category="fotografia" data-date="2024-03-12">
+                    <a href="jornadas.html">
+                        <img src="imagens/jornadas/cover.jpg" alt="Evento 6">
+                        <h3>XXVI Jornadas da Comunicação</h3>
+                        <p>12 de Março de 2024</p>
+                    </a>
+                </div>
+                <!-- Adicione mais eventos conforme necessário -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Beatriz Vilaça</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const buttons = document.querySelectorAll('.filtros button');
+            const galeriaContainer = document.querySelector('.galeria-container');
+            const events = Array.from(document.querySelectorAll('.evento'));
+
+            // Ordenar eventos por data (mais recente primeiro)
+            events.sort((a, b) => new Date(b.getAttribute('data-date')) - new Date(a.getAttribute('data-date')));
+
+            // Reordenar eventos no DOM
+            events.forEach(event => galeriaContainer.appendChild(event));
+
+            buttons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const filter = button.getAttribute('data-filter');
+                    events.forEach(event => {
+                        if (filter === 'todos' || event.getAttribute('data-category') === filter) {
+                            event.classList.remove('hidden');
+                        } else {
+                            event.classList.add('hidden');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+    <script src="custom-cursor.js"></script> <!-- Incluindo o JavaScript do cursor personalizado -->
+    <script src="navigation.js"></script>
+</body>
+</html>
